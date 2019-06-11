@@ -1,0 +1,23 @@
+.contact {
+  background: $secondary-color;
+  color: $white;
+  text-align: center;
+  font-size: 1.2em;
+  @at-root #{&}__link {
+    color: $white;
+    text-decoration: none;
+  }
+  @include breakpoint(medium){
+    @at-root #{&}__content {
+      width: 60%;
+      margin: 0 auto;
+      line-height: 1.2;
+    }
+  }
+  @include breakpoint(large){
+    @at-root #{&}__content {
+      width: 40%;
+      margin: 0 auto;
+    }
+  }
+}

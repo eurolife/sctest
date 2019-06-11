@@ -1,0 +1,11 @@
+.features {
+  @at-root #{&}__item {
+    text-align: center;
+    //padding: 2em;
+  }
+  @include breakpoint(large){
+    @at-root #{&}__item {
+      padding: 2em 3em;
+    }
+  }
+}

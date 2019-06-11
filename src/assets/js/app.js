@@ -1,17 +1,49 @@
 import $ from 'jquery';
-import 'what-input';
 
-// Foundation JS relies on a global varaible. In ES6, all imports are hoisted
-// to the top of the file so if we used`import` to import Foundation,
-// it would execute earlier than we have assigned the global variable.
-// This is why we have to use CommonJS require() here since it doesn't
-// have the hoisting behavior.
 window.jQuery = $;
-require('foundation-sites');
 
-// If you want to pick and choose which modules to include, comment out the above and uncomment
-// the line below
-//import './lib/foundation-explicit-pieces';
+function toggleMenuClass(){
+  $('.js-menutrigger').toggleClass('menu-trigger--active');
+  $('.menu').toggleClass('menu--active');
+  $('.menu-bg').toggleClass('menu-bg--active');
+}
 
+// Toggle mobile menu
+$(document).ready(function(){
+  $('.js-menutrigger').on('click', function(e){
+    toggleMenuClass();
+  })
 
-$(document).foundation();
+  // Menu items
+  $('.js-menu a').on('click', function(e){
+    e.preventDefault();
+    var section = $(e.currentTarget).attr('href');
+    var pos = $('.' + section).offset().top;
+    $('html,body').animate({ scrollTop: pos }, 'slow');
+    toggleMenuClass();
+  })
+
+  // CTA button
+  $('.js-cta').on('click', function(e){
+    e.preventDefault();
+    var pos = $('.contact').offset().top;
+    $('html,body').animate({ scrollTop: pos }, 'slow');
+  });
+
+  // Scroll to top button
+  $('.to-top').on('click', function(e){
+    e.preventDefault();
+    $('html,body').animate({ scrollTop: 0 }, 'slow');
+  });
+
+  // Hide/show scroll to top button
+  $(window).scroll(function() {
+    if($(this).scrollTop() > 200){
+      $('.to-top').addClass('show');
+    }
+    else {
+      $('.to-top').removeClass('show');
+    }
+  });
+  
+})

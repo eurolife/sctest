@@ -1,0 +1,25 @@
+.mainfooter {
+  font-size: 0.8em;
+  padding: 2em 0;
+  @at-root #{&}__copyright {
+    color: $primary-color;
+    margin-bottom: 1.5em;
+    text-align: center;
+  }
+  @at-root #{&}__credit {
+    color: $grey;
+    text-align: center;
+  }
+  @at-root #{&}__img {
+    vertical-align: bottom;
+    margin-left: 0.5em;
+  }
+  @include breakpoint(medium){
+    @at-root #{&}__copyright {
+      text-align: left;
+    }
+    @at-root #{&}__credit {
+      text-align: right;
+    }
+  }
+}

@@ -5,20 +5,177 @@
     <meta charset="utf-8" />
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Foundation for Sites</title>
+    <title>Storm Creative Test</title>
     <link rel="stylesheet" href="assets/css/app.css">
   </head>
 <body>
-
-<div class="grid-container">
-  <div class="grid-x grid-padding-x">
-    <div class="large-12 cell">
-      <h1>Welcome</h1>
+  <div class="page-wrapper">
+    <div class="main-wrapper">
+      <header class="mainheader">
+        <div class="grid-container">
+          <div class="grid-x grid-padding-x">
+            <div class="large-12 cell mainheader__wrapper">
+              <div class="mainheader__logo">
+                  <img class="mainheader__img" src="assets/img/logo-storm.svg">
+              </div>
+      
+              <!-- Mobile menu trigger -->
+              <a href='#' class="menu-trigger js-menutrigger">
+                  <span class="menu-trigger__span menu-trigger__span--1"></span>
+                  <span class="menu-trigger__span menu-trigger__span--2"></span>
+                  <span class="menu-trigger__span menu-trigger__span--3"></span>
+              </a>
+              
+              <nav class="menu js-menu">
+                <ul class="menu__navlist">
+                  <li class="menu__navitem">
+                    <a class="menu__navlink" href="demo">Demo</a>
+                  </li>
+                  <li class="menu__navitem">
+                    <a class="menu__navlink" href="intro">Introduction</a>
+                  </li>
+                  <li class="menu__navitem">
+                    <a class="menu__navlink" href="features">Features</a>
+                  </li>
+                  <li class="menu__navitem">
+                    <a class="menu__navlink menu__navlink--cta" href="contact">Get in touch</a>
+                  </li>
+                </ul>
+              </nav>
+              
+              <div class="menu-bg"></div>        
+            </div>
+          </div>
+        </div>
+      </header>
+      
+      
+      <div class="main-content">
+        
+        <header class="homeheader">
+          <div class="grid-container">
+              <div class="grid-x grid-padding-x">
+                <div class="large-12 cell">
+                  <div class="homeheader__headlines">
+                    <h2 class="homeheader__secondary">Lorem Ipsum Dolor</h2>
+                    <h1 class="homeheader__primary">
+                      <span class="homeheader__text">Lorem</span>
+                      <span class="homeheader__text homeheader__text--inline homeheader__text--accent homeheader__text--bold">&rsaquo;</span>
+                      <span class="homeheader__text homeheader__text--inline homeheader__text--bold">Ipsum</span>
+                    </h1>
+                    <button class="homeheader__cta btn btn--cta js-cta">Get in Touch</button>
+                  </div>
+                    <img class="homeheader__img" src="assets/img/home-header@2x.png">
+                </div>
+              </div>
+            </div>      
+        </header><section class="demo">
+            <div class="grid-container">
+              <div class="grid-x grid-padding-x demo__wrapper">
+                <div class="medium-6 cell">
+                  <img src="assets/img/demo@2x.png" alt="demo">
+                </div>
+                <div class="medium-6 cell">
+                  <div class="demo__content">
+                      <h2 class="demo__heading">Demo lorem ipsum dolar sit amet</h2>
+                      <p>Lorem ipsum dolor sit amet, consectetur
+                          adipiscing elit, sed do eiusmod tempor
+                          incididunt ut labore et dolore magna aliqua.</p>
+                  </div>
+                    
+                </div>
+              </div>
+            </div>
+        </section><section class="intro">
+            <div class="grid-container">
+              <div class="grid-x grid-padding-x intro__wrapper">
+                  <div class="medium-6 cell">
+                    <div class="intro__content">
+                        <h2 class="intro__heading">Introduction lorem ipsum dolor sit
+                            amet, consectetur adipiscing elit.</h2>
+                        <p class="intro__para">Lorem ipsum dolor sit amet, consectetur
+                            adipiscing elit, sed do eiusmod tempor
+                            incididunt ut labore et dolore magna aliqua.</p>
+                    </div>
+                      
+                  </div>
+                <div class="medium-6 cell">
+                  <img src="assets/img/img-office@2x.jpg" alt="Introduction">
+                </div>
+                
+              </div>
+            </div>
+        </section><section class="features">
+            <div class="grid-container">
+              <div class="grid-x grid-padding-x features__wrapper">
+                <div class="medium-4 cell features__item">
+                  <img src="assets/img/icon-fleet.svg" alt="Feature 1">
+                  <h3>Lorem ipsum dolor</h3>
+                  <p>Lorem ipsum dolor sit amet,
+                      consectetur adipiscing elit, sed do
+                      eiusmod tempor incididunt ut labore et
+                      dolore magna aliqua. Ut consequat
+                      semper viverra nam libero justo laoreet
+                      sit amet.</p>
+                </div>
+        
+                <div class="medium-4 cell features__item">
+                    <img src="assets/img/icon-workforce.svg" alt="Feature 2">
+                    <h3>Lorem ipsum dolor sit amet</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur
+                        adipiscing elit, sed do eiusmod tempor
+                        incididunt ut labore et dolore magna aliqua.</p>
+                  </div>
+              
+        
+                <div class="medium-4 cell features__item">
+                    <img src="assets/img/icon-insurance.svg" alt="Feature 3">
+                    <h3>Lorem ipsum dolor sit</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur
+                        adipiscing elit, sed do eiusmod tempor
+                        incididunt ut labore et dolore magna aliqua.
+                        Ut consequat semper viverra nam libero
+                        justo laoreet sit amet. Lacus luctus
+                        accumsan tortor posuere ac.</p>
+                  </div>
+        
+                  
+              </div>
+            </div>
+        </section><section class="contact">
+            <div class="grid-container">
+              <div class="grid-x grid-padding-x contact__wrapper">
+                <div class="cell contact__content">
+        
+                  <p class="text-lg"><span class="bold">Our new website is coming soon</span>, but you
+                      don’t need to wait to get started</p>
+                  <p class="bold">Email us at <a class="contact__link" href="mailto:comingsoon@website.co.uk">comingsoon@website.co.uk</a></p>
+                </div>
+        
+              </div>
+            </div>
+        </section>
+      </div>
+      
+    </div>
+    <div class="footer-wrapper">
+      
+      <footer class="mainfooter">
+        <div class="grid-container">
+          <div class="grid-x grid-padding-x">
+            <div class="medium-6 cell mainfooter__copyright">
+                Copyright © 2019. Company number XXXXXXX. Registered in England and Wales.
+            </div>
+            <div class="medium-6 cell mainfooter__credit">
+                Website by <a href="https://www.stormcreative.co.uk/"><img src="assets/img/footer-logo.png" class="mainfooter__img" alt="Storm"></a>
+              </div>
+          </div>
+        </div>
+      </footer>
     </div>
   </div>
-</div>
 
-
+  <a href="#" class="to-top"><span>&raquo;</span></a>
 <script src="assets/js/app.js"></script>
 </body>
 </html>

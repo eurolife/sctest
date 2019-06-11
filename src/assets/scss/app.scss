@@ -10,3 +10,21 @@
 // Grids (choose one)
 @include foundation-xy-grid-classes;
 
+// Global
+@import 'global/variables';
+@import 'global/colors';
+@import 'global/typography';
+@import 'global/pagelayout';
+
+// components
+@import 'components/buttons';
+
+
+// modules
+@import 'modules/header';
+@import 'modules/menu';
+@import 'modules/demo';
+@import 'modules/intro';
+@import 'modules/features';
+@import 'modules/contact';
+@import 'modules/footer';

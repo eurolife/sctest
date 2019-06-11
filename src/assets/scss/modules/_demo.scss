@@ -1,0 +1,16 @@
+.demo {
+  @at-root #{&}__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  @at-root #{&}__heading {
+    color: $primary-color;
+  }
+  @include breakpoint(large){
+    @at-root #{&}__content {
+      width: 70%;
+      margin: 0 auto;
+    }
+  }
+}

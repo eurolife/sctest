@@ -1,0 +1,144 @@
+/* Mobile menu trigger */
+.menu-trigger {
+  display: block;
+  height: 24px;
+  width: 30px; 
+  position: absolute;
+  right: 0.625rem;
+  top: 22px;
+  z-index: 90;
+  @at-root #{&}__span {
+    background: $white;
+    height: 3px;
+    width: 30px;
+    position: absolute;
+    left: 0;
+    transition: transform 0.2s;
+  }
+  @at-root #{&}__span--1 {
+    top: 0;
+  }
+  @at-root #{&}__span--2 {
+    top: 10px;
+  }
+  @at-root #{&}__span--3 {
+    top: 20px;
+  }
+  
+  //active
+  
+  @at-root #{&}--active {
+    .menu-trigger__span--1 {
+      transform: rotate(45deg);
+      top: 5px;
+    }
+    .menu-trigger__span--2 {
+      display: none;
+    }
+    .menu-trigger__span--3 {
+      transform: rotate(-45deg);
+      top: 5px;
+    }
+  }
+
+  @include breakpoint(medium) {
+    display: none;
+  }
+}
+
+
+/* Menu */
+
+.menu {
+  
+  position: absolute;
+  //left: 0;
+  //right: 0;
+  top: 50px;
+  z-index: 91;
+  left: -999px;
+  transition: left 0.3s;
+
+  @at-root #{&}__navlist {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  @at-root #{&}__navitem:not(:first-child) {
+    border-top: 1px dotted $grey;
+  }
+  @at-root #{&}__navlink {
+    color: $white;
+    display: block;
+    font-size: 1.2em;
+    padding: 0.75em;
+    height: 100%;
+    width: 100%;
+    text-decoration: none;
+    transition: color 0.3s, background 0.3s;
+    @at-root #{&}--cta {
+      background: $secondary-color;
+      
+      &:hover {
+        background: $white;
+      }
+    }
+    &:hover {
+      color: $secondary-color;
+    }
+  }
+  @at-root #{&}--active {
+    left: 0;
+    right: 0;
+  }
+  @include breakpoint(medium){
+    //display: inline-block;
+    //position: static;
+    //width: calc(100% - 220px);
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    right: 0.9375rem;
+    top: 0;
+    text-align: right;
+    height: 80px;
+    @at-root #{&}__navitem {
+      
+      display: inline-block;
+      &:not(:first-child){
+        border-top: none;
+        margin-left: 1em;
+      }
+    }
+    @at-root #{&}__navlink {
+      font-size: 1.1em;
+      line-height: 1.2;
+      padding: 0.5em 1.2em;
+      @at-root #{&}--cta {
+        border-radius: $border-radius;
+      }
+    }
+  }
+}
+
+/* Menu background */
+
+.menu-bg {
+  background: $primary-color;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s, visibility 0.3s;
+  z-index: 80;
+  @at-root #{&}--active {
+    opacity: 1;
+    visibility: visible;
+  }
+  @include breakpoint(medium){
+    display: none;
+  }
+}
